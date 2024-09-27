@@ -28,9 +28,9 @@ export default function MainPage() {
             <Select
               defaultValue={{
                 value: 'popularity ',
-                label: (<><SortAscendingOutlined style={{ marginRight: 8 }} /> Sort by: Popularity</>),
+                label: (<><SortAscendingOutlined className={styles.sortMr} /> Sort by: Popularity</>),
               }}
-              style={{width: 190}}
+              className={styles.sortWidth}
               options={[
                 {
                   value: 'popularity',

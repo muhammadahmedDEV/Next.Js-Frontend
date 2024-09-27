@@ -135,6 +135,12 @@
   width: 100%;
   margin-top: 10px;
 }
+.sortMr{
+  margin-right: 8px;
+}
+.sortWidth{
+  width: 190px;
+}
 .marginRightIcon{
   margin-right: 8px;
 }
