@@ -124,12 +124,17 @@
 
 .filterPad {
   padding: 10px;
+  color: #000;
+}
+.mainContainer{
+  background-color: #fff;
 }
 
 .filterPadOperat {
   padding: 10px;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 5px;
+  color: #000;
 }
 .selectCountryWidth{
   width: 100%;
@@ -148,6 +153,7 @@
   padding: 10px;
   text-align: right;
   font-size: 18px;
+  color: #000;
 }
 
 .imgAlignRight {

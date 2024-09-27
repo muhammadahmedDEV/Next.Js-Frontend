@@ -9,7 +9,7 @@ import FilterSection from "../components/filterSection";
 export default function MainPage() {
   const [showFilter, setShowFilter] = useState(true);
   return (
-    <Row>
+    <Row className={styles.mainContainer}>
       <Col xl={2} />
       <Col xl={20}>
         <Row className={styles.mainHead}>
