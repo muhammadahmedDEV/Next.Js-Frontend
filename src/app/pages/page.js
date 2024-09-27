@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../page.module.css";
-import { Col, Row } from "antd";
-import { SearchOutlined, MenuUnfoldOutlined } from "@ant-design/icons"
+import { Col, Row, Input, Select } from "antd";
+import { SearchOutlined, MenuUnfoldOutlined, SortAscendingOutlined, RightOutlined, GlobalOutlined } from "@ant-design/icons"
 import FerryDetail from "../components/ferryDetail";
 import FilterSection from "../components/filterSection";
 
@@ -12,16 +12,40 @@ export default function MainPage() {
       <Col xl={2} />
       <Col xl={20}>
         <Row className={styles.mainHead}>
+          <Col className={styles.navigatePad} xl={16}>
+            <p className={styles.navigateText}>Ferrytickets <span className={styles.colorBlack}> <RightOutlined className={styles.navigateArrow} /> Operators</span></p>
+          </Col>
+          <Col className={styles.ticketBtnContainer} xl={8}>
+            <button className={styles.ticketBtn}><RightOutlined /> Book your tickets</button>
+          </Col>
           <Col xl={24}>
             <h1>Ferry operators</h1>
             <p className={styles.headPara}>Discover the <span className={styles.headParaBold}>57 ferry operators</span> we work with</p>
           </Col>
           <Col xl={24}>
             <button onClick={() => setShowFilter(true)} className={styles.filterBtn}> <MenuUnfoldOutlined /> Filters</button>
-            <select className={styles.sortBtn}>
-              <option> Sort by: Reviews</option>
-            </select>
-            <button className={styles.searchBtn}><SearchOutlined /> Search</button>
+            <Select
+              defaultValue={{
+                value: 'popularity ',
+                label: (<><SortAscendingOutlined style={{ marginRight: 8 }} /> Sort by: Popularity</>),
+              }}
+              style={{width: 190}}
+              options={[
+                {
+                  value: 'popularity',
+                  label: 'Popularity',
+                }
+              ]}
+            />
+            <div className={styles.searchWrapper}>
+              <SearchOutlined className={styles.searchIcon} />
+              <input
+                type="text"
+                className={styles.searchBtn}
+                placeholder="Search"
+              />
+            </div>
+              <button className={styles.mapBtn}> <GlobalOutlined /> Live Map View</button>
           </Col>
         </Row>
         <Row>
@@ -48,12 +72,12 @@ export default function MainPage() {
               countryName={"Greece"}
               vesselsNo={8}
               ferryTypes={"8 normal"}
-              moreDetail={"Blue Star Ferries"}
               starValue={4.5}
+              showFilter
               popularVessels={"Blue Star Delos, Blue Star Naxos"}
               desc={`Blue Star Ferries is currently the biggest ferry company in Greece.
               It is a member of Attica Group, one of the most significant companies in the Greek shipping industry.
-              Its fleet consists of vessels of the latest technology and serves itineraries starting from the port of Piraeus and heading to the islands of Cyclades (Mykonos, Santorini, Paros etc)Dodecanese (Rhodes, Kos etc). Blue Star Ferries reaches over 50 destinations in total. Even though Blue Star ...`}
+              Its fleet consists of vessels of the latest technology and serves itineraries starting from the port of Piraeus and heading to the islands of Cyclades (Mykonos, Santorini, Paros etc)Dodecanese (Rhodes, Kos etc). Blue Star Ferries reaches over 50 destinations in total. Even though Blue Star was established in November 1992.`}
             />
             <FerryDetail
               imgSrc={"/seajets.png"}
@@ -65,8 +89,8 @@ export default function MainPage() {
               countryName={"Greece"}
               vesselsNo={17}
               ferryTypes={"10 normal and 7 high-speed ferries"}
-              moreDetail={"Blue Star Ferries"}
               starValue={2.5}
+              showFilter
               popularVessels={"WorldChampion jet, Seajet 2"}
               desc={`Seajets is the biggest company of high-speed vessels of the Aegean Sea. It is a joint venture of speedboats that was initially founded in 1989 to provide shipping services.
               The company's passenger ferries have been connecting over 26 destinations in the Aegean Sea since 2002. Their fleet consists of 14 high-speed catamarans and 3 conventional ones, with a speed of up to 50 knots.
@@ -85,8 +109,8 @@ export default function MainPage() {
               countryName2={"Itlay"}
               vesselsNo={6}
               ferryTypes={"Normal ferries"}
-              moreDetail={"Blue Star Ferries"}
               starValue={2.5}
+              showFilter
               popularVessels={"Superfast Xll, Superfast Xl"}
               desc={`Anek-Superfast is a joint venture established in June 2011 as a result of the cooperation between two major Greek ferry companies, Anek Lines and Superfast Ferries.
               The goal was to provide fast and convenient service to the customers, as both companies had vessels of the latest technology.

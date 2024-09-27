@@ -29,7 +29,7 @@
 }
 
 .mainHead {
-  padding: 15px;
+  padding: 15px 0px 0px 15px;
 }
 
 .headPara {
@@ -40,31 +40,69 @@
 }
 
 .filterBtn {
-  border-radius: 10px;
-  background-color: #fdfdfd;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  font-size: 17px;
-  padding: 10px 20px;
-  margin: 20px 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  font-size: 15px;
+  padding: 7px 12px;
+  margin: 15px 5px;
   cursor: pointer;
+  color: #616161;
+}
+.mapBtn{
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  font-size: 15px;
+  padding: 7px 12px;
+  margin: 15px 5px;
+  cursor: pointer;
+  color: #00afd3;
+  float: right;
+  margin-right: 15px;
+}
+
+.searchWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Adjust the icon size */
+  color: #616161;
 }
 
 .searchBtn {
-  border-radius: 10px;
-  background-color: #fdfdfd;
+  padding-left: 35px; /* Make space for the icon */
+  border-radius: 6px;
+  background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  font-size: 17px;
-  padding: 10px 20px;
-  margin: 20px 12px;
+  font-size: 15px;
+  padding: 7px 27px;
+  margin: 15px 5px;
   cursor: pointer;
+  color: #616161;
+  transition: width 0.3s ease;
+  width: 110px;
 }
+
+.searchBtn:focus {
+  width: 300px;
+  outline: none;
+  border-color: #2980b9;
+}
+
 
 .sortBtn {
   margin: 20px 12px;
   border-radius: 10px;
   background-color: #fdfdfd;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  font-size: 17px;
+  font-size: 15px;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -79,70 +117,126 @@
 .tileConatiner {
   background-color: #fdfdfd;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  margin: 7px;
-  margin-bottom: 70px;
+  border-radius: 5px;
+  margin: 15px;
+  margin-bottom: 10px;
 }
-.filterPad{
+
+.filterPad {
   padding: 10px;
 }
-.filterPadOperat{
+
+.filterPadOperat {
   padding: 10px;
   border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 5px;
 }
-.filterClose{
+.selectCountryWidth{
+  width: 100%;
+  margin-top: 10px;
+}
+.marginRightIcon{
+  margin-right: 8px;
+}
+.filterClose {
   padding: 10px;
   text-align: right;
   font-size: 18px;
 }
 
+.imgAlignRight {
+  text-align: right;
+}
+
 .flagTitle {
-  font-size: 20px;
+  font-size: 15px;
   color: #252525;
   font-weight: 500;
-  /* font-family: "Poppins"; */
 }
-.flexCenter{
+
+.flexCenter {
   margin-top: 8px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.checkFery{
+
+.checkFery {
   height: 20px;
-    width: 20px;
-    margin: 5px
+  width: 20px;
+  margin: 5px
 }
+
 .flagDesc {
-  font-size: 20px;
+  font-size: 14px;
   color: #252525;
   font-weight: 400;
-  /* font-family: "Poppins"; */
+}
+.flagCountryName{
+  font-size: 14px;
+  color: #252525;
+  font-weight: 500;
+}
+.byFont {
+  font-weight: 400;
 }
 
 .flagDescLink {
-  font-size: 20px;
+  font-size: 15px;
   color: #69b1ff;
-  font-weight: 400;
-  /* font-family: "Poppins"; */
+  font-weight: 500;
 }
-
+.navigatePad{
+  padding: 10px 2px;
+}
+.navigateText{
+  color: #00afd4;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ticketBtn{
+  border-radius: 6px;
+  background-color: #00afd3;
+  border: 1px solid #f9f900;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+}
+.ticketBtnContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+.mobFont {
+  font-size: 23px;
+  color: #1a1a1a;
+}
+.navigateArrow{
+  color: #000;
+  font-size: 14px;
+}
+.colorBlack{
+  color: #000;
+}
 .mbDesc {
   margin-bottom: 10px;
 }
 
 .headContainer {
   background-color: #f8f8f8;
-  padding: 12px;
+  padding: 10px 10px 5px 10px;
 }
 
 .descContainer {
   background-color: #fdfdfd;
-  padding: 12px;
+  padding: 12px 5px 5px 12px;
 }
 
 .starContainer {
-  text-align: right;
+  text-align: left;
 }
 
 .descContainerParag {
@@ -152,7 +246,7 @@
 .flagDescBorder {
   border-bottom: 1px solid #c0c0c0;
   padding-bottom: 17px;
-  font-size: 20px;
+  font-size: 15px;
   color: #252525;
   font-weight: 400;
   line-height: 1.6;
@@ -160,7 +254,7 @@
 
 .buttonContainer {
   text-align: right;
-  padding: 12px 10px 12px 0px;
+  padding: 12px 10px 5px 8px;
 }
 
 .moreButton {
@@ -177,34 +271,38 @@
   color: #fff;
   border-radius: 360px;
   padding: 12px;
-  font-size: 19px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 6px;
+  padding: 3px;
 }
 
 .justityEnd {
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
   padding-right: 10px;
-  padding-left: 10px;
 }
 
 .justityStart {
-  padding-top: 5px;
+  padding-top: 0px;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: end;
 }
 
 .padHeading {
-  padding: 10px;
+  padding-bottom: 4px;
 }
 
 .mlStar {
-  margin-left: 13px;
-  font-size: 16px;
-  font-weight: 400;
+  margin-left: 7px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #252525;
+}
+
+.starFont {
+  font-size: 18px;
 }
 
 .main {
@@ -342,15 +440,38 @@ a.secondary {
   .starContainer {
     text-align: left;
   }
-
-  .mobFont {
-    font-size: 23px;
+  .flagCountryName{
+    font-size: 17px;
   }
-
+  .justityStart{
+    align-items: baseline;
+  }
+  .flagTitle{
+    font-size: 19px;
+  }
   .mlStar {
     font-weight: 700;
   }
-  .searchBtn{
+  .searchWrapper{
+    display: none;
+  }
+  .searchBtn {
+    display: none;
+  }
+  .ticketBtnContainer{
+    display: none;
+  }
+
+  .justityEnd {
+    padding-bottom: 10px;
+  }
+  .flagDesc{
+    font-size: 17px;
+  }
+  .imgAlignRight {
+    text-align: left;
+  }
+  .mapBtn{
     display: none;
   }
 }

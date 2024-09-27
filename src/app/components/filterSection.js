@@ -1,6 +1,7 @@
 import styles from "../page.module.css";
-import { Col, Row} from "antd";
-import { CloseOutlined } from "@ant-design/icons"
+import { Col, Row, Select } from "antd";
+import Image from "next/image";
+import { CloseOutlined, AimOutlined } from "@ant-design/icons"
 
 export default function FilterSection(props) {
     return (
@@ -15,6 +16,23 @@ export default function FilterSection(props) {
                     </Col>
                     <Col className={styles.filterPadOperat} xs={24} xl={24}>
                         <h4>Operating in</h4>
+                        <Select
+                            defaultValue={{
+                                value: 'greece ',
+                                label: (<><AimOutlined className={styles.marginRightIcon} /> Select a country</>),
+                            }}
+                            className={styles.selectCountryWidth}
+                            options={[
+                                {
+                                    value: 'greece',
+                                    label: (<><Image src={"/greece-flag.png"} alt={"greece flag"} width={22} height={15} /> Greece</>),
+                                },
+                                {
+                                    value: 'itlay',
+                                    label: (<><Image src={"/itlay.png"} alt={"itlay flag"} width={22} height={15} /> Itlay</>),
+                                }
+                            ]}
+                        />
                     </Col>
                     <Col className={styles.filterPad} xl={24}>
                         <h4>Ferry Types</h4>
